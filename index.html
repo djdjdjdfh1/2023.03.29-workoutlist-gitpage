@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/workout.css" />
+  </head>
+  <body>
+    <!-- 시간 -->
+    <h1 id="clock"></h1>
+
+    <!-- 운동목록 입력 인풋 -->
+    <form id="workout_form" action="">
+      <input
+        id="workout_text"
+        type="text"
+        placeholder="오늘 끝낸 운동을 입력하세요."
+        size="30"
+        required
+      />
+      <input type="submit" value="입력" />
+    </form>
+
+    <!-- 운동목록 리스트 -->
+    <ul id="workout_list"></ul>
+
+    <!-- 리스트 저장 -->
+    <form id="workout_save" class="hidden">
+      <input
+        id="workout_date"
+        type="number"
+        placeholder="저장할 날짜를 입력하세요."
+        required
+        min="0"
+      />
+      <input type="submit" value="저장" />
+    </form>
+
+    <!-- 리스트 불러오기 -->
+    <form id="workout_load">
+      <input
+        type="number"
+        placeholder="확인할 날짜를 입력하세요."
+        required
+        min="0"
+      />
+      <input type="submit" value="불러오기" />
+    </form>
+
+    <!-- 리스트 삭제하기 -->
+    <form id="workout_delete">
+      <input
+        type="number"
+        placeholder="삭제할 날짜를 입력하세요"
+        required
+        min="0"
+      />
+      <input type="submit" value="삭제" />
+    </form>
+
+    <ul id="list-btn"></ul>
+
+    <script src="./js/workbackground.js"></script>
+    <script src="./js/clock2.js"></script>
+    <script src="./js/workout.js"></script>
+  </body>
+</html>
